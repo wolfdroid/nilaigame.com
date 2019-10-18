@@ -1,0 +1,153 @@
+body{
+    background : 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-image: linear-gradient(#474747,black);
+    margin-bottom: 30px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+}
+
+.recback {
+    position: relative;
+    margin: 5vw auto;
+    height: 770px;
+    width: 520px;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 80px 0 rgba(0,240,180,0.5);
+}
+
+.logo{
+    position: relative;
+    margin:50px 200px auto;
+    max-width: 150px;
+    height: auto;
+}
+
+.customcolor:hover{
+    background-color:hsl(165, 70%, 70%);
+    color: white;
+}
+
+.customcolor{
+    background-color: #00F0B4;
+    margin:100px 70px auto;
+}
+
+.nocolor:hover{
+    background-color:lightgray;
+    color: white;
+}
+
+.nocolor{
+    background-color: #4F4F4F;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.signinbutton{
+    position: relative;
+    border: 0px;
+    height: 59px;
+    width: 375px;
+    border-radius: 10vw;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 800;
+    box-shadow: none;
+    font-family: "Lucida Sans";
+  }
+
+.buttonfitting{
+    display: inline-block;
+    position: relative;
+}
+
+.steambutton:hover{
+    background: linear-gradient(rgba(255, 253, 253, 0.335),rgba(0, 10, 100, 0.6)), url("/img/steamlogo.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: white;
+}
+
+.steambutton{
+    box-sizing: border-box;
+    height: 80px;
+    width: 160px;
+    border-radius: 10px;
+    border: 4px solid #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/steamlogo.jpeg");
+    margin-left: 75px;
+    margin-right: 20px;
+    margin-top: 4vh;
+  }
+
+  .gplusbutton:hover{
+    background: linear-gradient(rgba(255, 253, 253, 0.335),rgba(255, 0, 0, 0.3)), url("/img/gpluslogo.png");
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: white;
+}
+
+.gplusbutton{
+    box-sizing: border-box;
+    height: 80px;
+    width: 160px;
+    border-radius: 10px;
+    border: 4px solid #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/gpluslogo.png");
+    background-color: rgb(0, 0, 0);
+    margin-left: 25px;   
+}
+
+input {
+    position: relative;
+    font-family: "Lucida Sans";
+    font-weight: 400;
+    font-size: 1.5em;
+    width: 80%;
+    margin-left: 50px;
+    margin-bottom: -40px;
+    margin-top : 10px;
+    background-color:transparent;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 4px solid #00F0B4;
+}
+
+.labelname{
+    position: relative;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom : -100px;
+    font-family: 'Lucida Sans';
+}
+
+.eye{
+    position: absolute;
+    right: 60px;
+    top: 320px;
+    font-size: 2em;
+    border: none;
+    background: none;
+    margin-bottom: 30px;
+}
+
+#eye1{
+    display: none;
+    color:#00F0B4;
+}
