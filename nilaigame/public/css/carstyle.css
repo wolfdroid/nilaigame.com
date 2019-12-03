@@ -1,0 +1,127 @@
+
+#slider {
+    position: sticky;
+    margin: auto;
+    width: 50vw;
+    height: 30vw;
+    font-family: 'Helvetica Neue', sans-serif;
+    perspective: 140vw;
+    transform-style: preserve-3d;
+  }
+  
+  input[type=radio] {
+    position: relative;
+    margin:auto;
+    width: 1vw;
+    height: 1vw;
+    opacity: 0;
+  }
+  
+  
+  input[type=radio]:checked {
+    opacity: 0;
+  }
+  
+  #slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-radius: 2vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease;
+  }
+
+  
+  #slide1 {
+    background: linear-gradient( rgba(245, 246, 252, 0.52), rgba(55, 0, 255, 0.73)), 
+    url('https://hb.imgix.net/13b677b1fa9c49ef47762646c76653d56b5c144f.jpg?auto=compress,format&fit=crop&h=353&w=616&s=8d904bfd988a9daed45a8c7bc96ba5e3') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #slide2 {
+    background: linear-gradient( rgba(166, 172, 202, 0.52), rgba(236, 165, 0, 0.73)), 
+    url('https://d3tg06jbotvai2.cloudfront.net/game_tetiere/upload/gameimage/file/35646.jpeg') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #slide3 {
+    background: linear-gradient( rgba(166, 172, 202, 0.52), rgba(236, 0, 0, 0.73)), 
+    url('https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_DragonsDogmaDarkArisen_image1600w.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #slide4 {
+    background: linear-gradient( rgba(166, 172, 202, 0.52), rgba(238, 255, 0, 0.73)), 
+    url('https://hb.imgix.net/eb53ad3dea5946b4d8fea1313e24ca602daf17b8.jpg?auto=compress,format&fit=crop&h=353&w=616&s=b475999add024b1026b1fa9477e3c57d') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #slide5 {
+    background: linear-gradient( rgba(166, 172, 202, 0.52), rgba(0, 247, 255, 0.73)), 
+    url('https://hb.imgix.net/551fbc04cfc3e42fbe8f01d62962855ab1990b8f.jpg?auto=compress,format&fit=crop&h=353&w=616&s=9850e740b4b6d6cc5957771433808e39') center center no-repeat;
+    background-size: cover;
+  }
+  
+  
+  /* Slider Functionality */
+  
+  /* Active Slide */
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+    box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+  }
+  
+  /* Next Slide */
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(15%, 0, -100px);
+  }
+  
+  
+  /* Next to Next Slide */
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(30%, 0, -250px);
+  }
+  
+  /* Previous to Previous Slide */
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-30%, 0, -250px);
+  }
+  
+  /* Previous Slide */
+  #s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(-15%, 0,-100px);
+  }
+
+  .playbutton{
+    width: 69px;
+    height: 50px;
+    display: inline-block;
+    background: red;
+    border-radius: 1vw;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    border: transparent;
+  }
+
+  .playbutton:hover{
+    width: 69px;
+    height: 50px;
+    display: inline-block;
+    background: darkred;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    border: transparent;
+  }

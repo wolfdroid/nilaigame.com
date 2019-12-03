@@ -1,0 +1,10 @@
+/*Search Button Style*/
+.btn-search{
+    padding: .5vw;
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+}
+.btn-search:hover{
+    background: rgb(0, 240, 180);
+}
