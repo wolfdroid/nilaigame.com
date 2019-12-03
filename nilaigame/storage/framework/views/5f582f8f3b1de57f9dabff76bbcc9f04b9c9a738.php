@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <!-- Title and Logo -->
     <title>nilaigame - Indonesian Game Review Website</title>
-    <link rel="shortcut icon" href="{{ asset('favicon.ico')}}">
-    <link rel="icon" href="{{ asset('img/logo.png')}}">
+    <link rel="shortcut icon" href="<?php echo e(asset('favicon.ico')); ?>">
+    <link rel="icon" href="<?php echo e(asset('img/logo.png')); ?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- animate CSS -->
@@ -32,7 +32,7 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="<?php echo e(asset('js/app.js')); ?>" defer></script>
     <!--Custom Header-->
     <!-- Custom CSS-->
         <!-- Custom` Carousel -->
@@ -50,12 +50,12 @@
 
 <body>
     <!-- Header Part Start -->
-    @include('inc.messages')
+    <?php echo $__env->make('inc.messages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <header class="main_menu home_menu">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
-                    @include('inc.navbar')
+                    <?php echo $__env->make('inc.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
         <div class = "container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-7">
-                    @yield('content')
+                    <?php echo $__env->yieldContent('content'); ?>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
     <!-- Footer Part Start -->
     <footer class = "footer_part">
         <div class = "container">
-            @yield('footer')
+            <?php echo $__env->yieldContent('footer'); ?>
         </div>
     </footer>
 </body>
@@ -112,3 +112,4 @@
     <script src="js/custom.js"></script>
 </section>
 </html>
+<?php /**PATH D:\xampp\htdocs\test\nilaigame2\resources\views/layouts/app.blade.php ENDPATH**/ ?>

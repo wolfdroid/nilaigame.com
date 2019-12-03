@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!--Banner Section -->
 <div class="banner_text text-center">
     <div class="banner_text_iner">
@@ -53,8 +52,8 @@
         </div>
     </div>
 </div>
-@endsection
-@section('footer')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('footer'); ?>
 <!-- Footer Section -->
 <div class="row justify-content-around">
         <!-- First Footer Part-->
@@ -121,4 +120,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\test\nilaigame2\resources\views/pages/index.blade.php ENDPATH**/ ?>
